@@ -58,12 +58,8 @@ const cubeRoot = (number) => {
     }
 };
 
-
-
-
-const factorial = (n) => {
-    if (n < 2) {
-        return 1;
-    }
-    return n * fac(n - 1);
-};
+const root = (number, nroot) => { 
+    answer = Math.pow(number, 1/nroot)
+    return answer;
+        } 
+}
