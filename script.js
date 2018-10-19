@@ -1,60 +1,69 @@
-var first_name = prompt("what is your first name?");
-
-
-var last_name = prompt("what is your last name?");
-
-
-function full_name(first_name, last_name) {
-    var full_name = first_name + " " + last_name; 
-    return full_name;
+const add = (num1, num2) => {
+    return num1 + num2;
 };
 
-var print = full_name(first_name, last_name);
+const subtract = (num1, num2) => {
+    return num1 - num2;
+};
 
-console.log(print);
+const multiple = (num1, num2) => {
+    return num1 * num2;
+};
 
-function last_first(first_name, last_name) {
-    var last_first2  = last_name +", " + first_name;
-    return last_first2;
-}
+const divide = (num1, num2) => {
+    return num1 / num2;
+};
 
-var print2 = last_first(first_name, last_name); 
+const square = (x) => {
+    return x * x;
+};
 
-console.log (print2);
+const cube = (base) => {
+    let answer = 1;
 
-var age = prompt("what is your age?")
-age = parseInt(age, 10);
+    for (i = 0; i < 3; i++) {
+        answer = answer * base
+    }
+    return answer;
+};
 
-function over18(age) {
-    if (isNaN(age)) {
-        return 'Not a Number!';}
-    else if (age < 18) {
-    return false; 
- }  else {
-    return true    
-    }}
+const power = (base, exponent) => {
+    let answer = 1;
 
-var print3 = over18(age)
-console.log (print3);
+    for (i = 0; i < exponent; i++) {
+        answer = answer * base
+    }
+    return answer;
+};
 
-var fahrenheit = prompt ("what is the temperature in farhenheit?")
-fahrenheit = parseFloat( fahrenheit)
+const modulo = (number, divisor) => {
+    let modulo = number %= divisor;
+    return modulo;
+};
 
-function to_celcius (fahrenheit) {
-    answer = (fahrenheit - 32) *.55555
-    return answer; 
-}
-print4 = to_celcius(fahrenheit) 
-console.log (print4)
+const squareRoot = (number) => {
+    for (var i = number; i >= 1; i--) {
+        (i * i === number ) 
+            number = i;
+        return number;
+        }
+};
 
-var celcius = prompt ("what is the temperature in celcius?")
-celcius = parseFloat(celcius);
+const cubeRoot = (number) => {
+    for (var i = number; i >= 1; i--) {
+        if (i * i * i === number ) {
+            cuberoot = i;
+        return cuberoot;
+        }
+    }
+};
 
-function to_farhrenheit (celcius) {
-    answer2 = (celcius * 9/5) + 32
-    return answer2; 
-}
-print5 = to_farhrenheit(celcius) 
-console.log (print5)
 
-   
+
+
+const factorial = (n) => {
+    if (n < 2) {
+        return 1;
+    }
+    return n * fac(n - 1);
+};
